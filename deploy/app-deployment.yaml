@@ -4,7 +4,7 @@ metadata:
   name: app-deployment
   namespace: default
   annotations:
-    reloader.stakater.com/match: "true"  # Trigger reloader for the ConfigMap changes
+    reloader.stakater.com/auto: "true"  # Trigger reloader for the ConfigMap changes
 spec:
   replicas: 3
   selector:
