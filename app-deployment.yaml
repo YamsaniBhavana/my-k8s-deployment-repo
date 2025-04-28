@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: my-app
+  annotations:
+    reloader.stakater.com/match: "app-config"  # Add the reloader annotation
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+        - name: app-container
+          image: your-image-here
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: app-config-volume
+              mountPath: /etc/app-config  # Mount the ConfigMap as a volume
+      volumes:
+        - name: app-config-volume
+          configMap:
+            name: app-config  # Reference the ConfigMap here
+
