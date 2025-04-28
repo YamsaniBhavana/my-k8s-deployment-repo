@@ -1,5 +1,0 @@
-# deploy/fleet.yaml
-defaultNamespace: default
-helm:
-  releaseName: my-app
-
