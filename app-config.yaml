@@ -7,6 +7,6 @@ data:
   APP_NAME: "App"
   APP_VERSION: "1.0.0"
   APP_ENV: "prod"
-  DB_HOST: "database-host-1"
+  DB_HOST: "database-host-2"
   DB_PORT: "5432"
 
