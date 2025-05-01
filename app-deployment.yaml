@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-app
   annotations:
-    reloader.stakater.com/match: "app-config"
+    metis.configmap.reloader/match: "app-config"
 spec:
   replicas: 2
   selector:
