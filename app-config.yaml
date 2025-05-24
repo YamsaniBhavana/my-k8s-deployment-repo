@@ -4,7 +4,7 @@ metadata:
   name: app-config
   namespace: default
 data:
-  APP_NAME: "hello-world-2"
+  APP_NAME: "hello-world-3"
   APP_VERSION: "2.0.0"
   APP_ENV: "production"
   DB_HOST: "database-host"
